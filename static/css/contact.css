@@ -1,0 +1,57 @@
+.main{
+    height: 90vh;
+}
+
+.main .contact{
+    text-align: center;
+    padding: 20px 50px;
+}
+
+.main .contact .bottom{
+    justify-content: space-around;
+}
+
+.main .contact .bottom{
+    text-align: left;
+}
+
+.main .contact .bottom .left .block .img{
+    width: 20%;
+    height: auto;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.main .contact .bottom .left .email .text .desc{
+    color: white;
+    font-weight: normal;
+}
+
+.main .contact .bottom .right{
+    width: 70%;
+}
+
+.main .contact .bottom .right .heading{
+    text-align: center;
+}
+
+/* ! Responsive Version */
+@media (max-width: 425px) {
+    .main{
+        height: auto;
+    }
+
+    .main .contact{
+        padding: 20px;
+    }
+
+    .main .contact .bottom{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .main .contact .bottom .right .form{
+        padding: 10px;
+    }
+}

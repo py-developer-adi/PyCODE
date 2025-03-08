@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="{{url_for('static', filename='components/header.css')}}">
+
+<header class="header">
+    <div class="top flex v-center">
+        <div class="menu">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+        </div>
+        <ul class="links left flex gap-20 personal">
+            {% if current_user.is_authenticated %}
+            <li><a href="/logout" class="link btn">Logout</a></li>
+            {% if current_user.is_beta %}
+            <li><a href="/degrade-beta" class="link btn">Degrade Beta</a></li>
+            {% else %}
+            <li><a href="/upgrade-beta" class="link btn">Upgrade Beta</a></li>
+            {% endif %}
+            {% else %}
+            <li><a href="/login" class="link btn">Login</a></li>
+            <li><a href="/create-acc" class="link btn">Create Account</a></li>
+            {% endif %}
+        </ul>
+        <h1 class="heading"><a href="/home" class="link">PyCODE</a></h1>
+        <div class="right flex gap-10">
+            <a href="/collection" class="link btn">Collection</a>
+            <a href="/services" class="link btn">Services</a>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="bottom flex h-center">
+        <ul class="links flex gap-20">
+            <li><a href="/home" class="link btn">Home</a></li>
+            <li><a href="/collection" class="link btn">Collection</a></li>
+            <li><a href="/articles" class="link btn">Articles</a></li>
+            <li><a href="/services" class="link btn">Services</a></li>
+            <li><a href="/contact" class="link btn">Contact</a></li>
+        </ul>
+        <ul class="links left flex gap-20 personal">
+            {% if current_user.is_authenticated %}
+            <li><a href="/logout" class="link btn">Logout</a></li>
+            {% if current_user.is_beta %}
+            <li><a href="/degrade-beta" class="link btn">Degrade Beta</a></li>
+            {% else %}
+            <li><a href="/upgrade-beta" class="link btn">Upgrade Beta</a></li>
+            {% endif %}
+            {% else %}
+            <li><a href="/login" class="link btn">Login</a></li>
+            <li><a href="/create-acc" class="link btn">Create Account</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</header>
+<script src="{{url_for('static', filename='components/header.js')}}"></script>

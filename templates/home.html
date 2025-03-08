@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyCODE | Learn, Build, and Innovate!</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/messagebox.html' %}
+
+    <main class="main">
+        <section class="hero flex h-center v-center">
+            <div class="intro flex-col gap-50">
+                <div class="top">
+                    <h3 class="greet"></h3>
+                    <h1 class="headline"></h1>
+                    <p class="sub-headline"></p>
+                </div>
+                <div class="bottom">
+                    <img src="{{url_for('static', filename='assets/imgrect.png')}}" alt="PyCODE Hero Image" class="img hero-img hero-img-1">
+                    <img src="{{url_for('static', filename='assets/imgsq.png')}}" alt="PyCODE Hero Image" class="img hero-img hero-img-2">
+                </div>
+            </div>
+        </section>
+
+        <section class="benefit_section flex-col gap-50" onload="fade_in()">
+            <h1 class="heading">Why Choose Us?</h1>
+            <div class="benefits">
+                <div class="benefit flex-col gap-20">
+                    <img src="{{url_for('static', filename='assets/aim.png')}}" alt="benefit image" class="img">
+                    <h3 class="heading desc">No Fluff, Only What Matters</h3>
+                    <p class="desc">PyCODE delivers focused, to-the-point learning resources without unnecessary theory, ensuring quick and effective learning.</p>
+                </div>
+                <div class="benefit flex-col gap-20">
+                    <img src="{{url_for('static', filename='assets/code.png')}}" alt="benefit image" class="img">
+                    <h3 class="heading desc">Built by a Passionate Developer for Developers</h3>
+                    <p class="desc">Unlike corporate brands that mass-produce content, PyCODE is built with real experience and community-driven insights, making the learning journey smoother.</p>
+                </div>
+                <div class="benefit flex-col gap-20">
+                    <img src="{{url_for('static', filename='assets/future.png')}}" alt="benefit image" class="img">
+                    <h3 class="heading desc">Future-Ready & Expanding</h3>
+                    <p class="desc">PyCODE isn;t just about today's products. We are constantly evolving, adding new templates, tools, and courses to stay ahead in tech.</p>
+                </div>
+                <div class="benefit flex-col gap-20">
+                    <img src="{{url_for('static', filename='assets/dollar.png')}}" alt="benefit image" class="img">
+                    <h3 class="heading desc">Budget-Friendly, High Value</h3>
+                    <p class="desc">Get premium-quality learning material and templates at affordable prices, making coding accessible to everyone. Other brands charge way more for the same or even lesser value.</p>
+                </div>
+                <div class="benefit flex-col gap-20">
+                    <img src="{{url_for('static', filename='assets/notebook.png')}}" alt="benefit image" class="img">
+                    <h3 class="heading desc">Handcrafted for Practical Learning</h3>
+                    <p class="desc">Unlike generic courses, Python M-Series and THE SURFACE are designed with a practical, step-by-step approach to help you build real-world coding skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured_models flex-col gap-20">
+            <h1 class="heading">eBook Models | PyCODE</h1>
+            <div class="models">
+                {% for product in models %}
+                <a href="/overview/{{product.id}}" class="model link flex-col gap-20">
+                    <img src="{{url_for('static', filename=product.cover)}}" alt="featured model image" class="img">
+                    <h2 class="title">{{product.model}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="featured_articles flex-col gap-20">
+            <h1 class="heading">Articles | PyCODE</h1>
+            <div class="articles">
+                {% for article in articles %}
+                <a href="/view/{{article.id}}" class="article link flex-col gap-20">
+                    <img src="{{url_for('static', filename=article.cover)}}" alt="featured article image" class="img">
+                    <h2 class="title">{{article.title}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        {% include 'components/footer.html' %}
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="{{url_for('static', filename='js/home.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.form{
+    padding: 20px 50px;
+}
+
+.form .input{
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid var(--green);
+}
+
+.form .input:focus{
+    background-color: white;
+    color: black;
+    box-shadow: 
+        0 0 10px var(--green),
+        0 0 10px var(--green);
+}
+
+.form .btn{
+    width: fit-content;
+    background-color: var(--green);
+    transition: all 0.3s;
+}
+
+.form .btn:hover{
+    color: var(--green);
+    background-color: transparent;
+    box-shadow: 
+        0 0 10px var(--green),
+        0 0 10px var(--green);
+}

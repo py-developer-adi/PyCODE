@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Developer Gateway | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/auth.css')}}">
+</head>
+<body>
+    {% include 'components/messagebox.html' %}
+    <main class="main flex-col v-center h-center">
+        <section class="log">
+            <div class="head flex v-center">
+                <h1 class="title">PyCODE</h1>
+                <a href="/login" class="link btn">Login</a>
+            </div>
+            <form action="/create-acc" method="post" class="form flex-col gap-10">
+                <div class="form-elem flex gap-10 v-center">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Create a username" class="input">
+                </div>
+                <div class="form-elem flex gap-10 v-center">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email id" class="input">
+                    <p class="note">All important notifications will be sent to this email.</p>
+                </div>
+                <div class="form-elem flex gap-10 v-center">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Create a Password" class="input">
+                </div>
+                <div class="form-elem beta-join flex gap-10 v-center">
+                    <div class="inp flex gap-10">
+                        <input type="checkbox" name="is_beta" id="is_beta" class="input">
+                        <label for="is_beta">Join as Beta User</label>
+                    </div>
+                    <p class="note beta_note">If you joined as beta user, you can get all resources at discounted price. But you've to review all products on time.</p>
+                </div>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('.log').classList.add('fade-in');
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<style>
+    .flash {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        overflow: hidden; /* Hide overflow for the wipe effect */
+        max-height: 0; /* Start with 0 height */
+        opacity: 0; /* Start with 0 opacity */
+        animation: wipeDown 0.5s ease-in-out forwards;
+    }
+
+    .error {
+        background-color: var(--red);
+    }
+
+    .success {
+        background-color: var(--green);
+    }
+
+    .info {
+        background-color: var(--blue);
+    }
+</style>
+
+{% with messages=get_flashed_messages(with_categories=True) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="flash {{category}} wipe-down">{{message}}</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<script>
+    setTimeout(function() {
+        const alerts = document.querySelectorAll('.flash');
+        alerts.forEach(alert => {
+            alert.style.opacity = '0';
+            alert.style.transition = 'opacity 0.5s ease-in-out';
+
+            setTimeout(() => alert.remove(), 500);
+        });
+    }, 3000);
+</script>

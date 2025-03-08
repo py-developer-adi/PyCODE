@@ -1,0 +1,145 @@
+:root{
+    --blue: #7e9be3;
+    --green: #80ffe4;
+    --red: #ff8f8f;
+    --white: #fff;
+    --gray: #c4c4c4;
+    --bg: #121212;
+    --bg_s: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--white);
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.gap-20{
+    gap: 20px;
+}
+
+.gap-50{
+    gap: 50px;
+}
+
+.links{
+    list-style: none;
+}
+
+.v-center{
+    align-items: center;
+}
+
+.h-center{
+    justify-content: center;
+}
+
+.link{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.btn{
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.rotate-45p{
+    transform: rotate(405deg);
+}
+
+.rotate-45n{
+    transform: rotate(-405deg);
+}
+
+.move-p{
+    transform: translateX(0px);
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+.hidden{
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add a slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes flipout {
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}
+
+.flip{
+    animation: flipout 0.5s ease-out forwards;
+}
+
+@keyframes wipeDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 100%; /* Adjust based on your message height */
+        opacity: 1;
+    }
+}
+
+.wipe-down{
+    animation: wipeDown 0.5s ease-out forwards;
+}
+
+@keyframes wipeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 0.7;
+        transform: translateX(0px);
+    }
+}
+
+.wipe-right{
+    animation: wipeRight 0.5s ease-out forwards;
+}

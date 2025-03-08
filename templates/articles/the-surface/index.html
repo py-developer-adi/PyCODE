@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SURFACE - by PyCODE | Just Everything</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='articles/the-surface/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='articles/the-surface/animations.css')}}">
+</head>
+<body>
+    <main class="main flex-col gap-50">
+        <section class="hero">
+            <div class="left flex-col">
+                <header class="header flex v-center">
+                    <h1 class="title"><a href="/home" class="link">PyCODE</a></h1>
+                    <ul class="links flex gap-10">
+                        <li><a href="/home" class="link btn">Home</a></li>
+                        <li><a href="/contact" class="link btn">Contact</a></li>
+                    </ul>
+                </header>
+                <div class="data flex-col">
+                    <video id="bgclip" autoplay loop preload="auto">
+                        <source src="hero.mp4" type="video/mp4">
+                    </video>
+                    <div class="bottom flex-col gap-50">
+                        <div class="heads">
+                            <h1 class="headline">THE SURFACE - by PyCODE</h1>
+                            <h3 class="sub-headline">Learn, Code, and Build!</h3>
+                        </div>
+                        <p class="para">You'll learn how to code, or it's free</p>
+                        <ul class="links flex gap-10">
+                            <li><a href="{{url_for('static', filename='articles/the-surface/THE SURFACE - by PyCODE (preview).zip')}}" class="link btn" id="preview">Download Preview</a></li>
+                            <li><a href="#resources" class="link btn" id="tiers">See Contents</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="data">
+                    <video class="mp4" autoplay loop preload="auto">
+                        <source src="hero.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="tiers flex-col gap-20">
+            <div class="top">
+                <h1 class="heading">Tiers | Get the best one for you.</h1>
+            </div>
+
+            <div class="bottom">
+                <div class="tier flex-col gap-10" id="essential-tier">
+                    <h1 class="heading">Essential</h1>
+                    <hr class="sub-divider">
+                    <div class="data">
+                        <ul class="links">
+                            <li>BUILDING THE SHIP</li>
+                            <li>PYTHON BASICS</li>
+                            <li>PYTHON ADVANCED</li>
+                            <li>CHEAT SHEET</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tier flex-col gap-10" id="customized-tier">
+                    <h1 class="heading">Customized</h1>
+                    <hr class="sub-divider">
+                    <div class="data">
+                        <ul class="links">
+                            <li>BUILDING THE SHIP</li>
+                            <li>PYTHON BASICS</li>
+                            <li>PYTHON ADVANCED</li>
+                            <li>CHEAT SHEET</li>
+                            <li>BEING PyCODE</li>
+                            <li>PYCODE ADVANCED</li>
+                            <li>PyCODE TESTING</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tier flex-col gap-10" id="premium-tier">
+                    <h1 class="heading">Premium</h1>
+                    <hr class="sub-divider">
+                    <div class="data">
+                        <ul class="links">
+                            <li>BUILDING THE SHIP</li>
+                            <li>PYTHON BASICS</li>
+                            <li>PYTHON ADVANCED</li>
+                            <li>CHEAT SHEET</li>
+                            <li>BEING PyCODE</li>
+                            <li>PYCODE ADVANCED</li>
+                            <li>PyCODE TESTING</li>
+                            <li>PyCODE DEFENCE</li>
+                            <li>TEMPLATES</li>
+                            <li>ADDITIONAL RESOURCES</li>
+                            <li>PyCODE PRO ADD-ONs</li>
+                            <li>ARTIFICIAL INTELLIGENCE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources flex-col gap-20" id="resources">
+            <h1 class="heading">Resources | THE SURFACE</h1>
+            <div class="bottom flex">
+                <div class="content">                    
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/building_the_ship.png')}}" alt="Building The Ship" class="img">
+                            <h2 class="title">BUILDING THE SHIP</h2>
+                        </div>
+                        <p class="para">Your ultimate guide to mastering Python! From basics to advanced concepts, this eBook provides step-by-step instructions, templates, cheat sheets, and exclusive PyCODE resources. Happy Coding!</p>
+                    </div>
+                </div>
+                    
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/python_basics.png')}}" alt="Python Basics" class="img">
+                            <h2 class="title">PYTHON BASICS</h2>
+                        </div>
+                        <p class="para">Learn syntax, variables, data types, operators, loops, functions, and more. This section builds the foundation for your Python programming journey. Start coding today!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/python_advanced.png')}}" alt="Python Advanced" class="img">
+                            <h2 class="title">PYTHON ADVANCED</h2>
+                        </div>
+                        <p class="para">Explore data structures, OOP, decorators, file handling, error handling, and libraries. Master advanced concepts to tackle complex projects with confidence. Keep coding!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/pycode_advanced.png')}}" alt="PyCODE Advanced" class="img">
+                            <h2 class="title">PyCODE ADVANCED</h2>
+                        </div>
+                        <p class="para">Discover common libraries, real-world use cases, and example projects to elevate your coding skills and build advanced applications. Code like a pro!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/being_pycode.png')}}" alt="Being PyCODE" class="img" width="30">
+                            <h2 class="title">BEING PyCODE</h2>
+                        </div>
+                        <p class="para">An exclusive ebook offering unique learning assets, advanced Python concepts, and practical insights to elevate your coding skills and master Python programming efficiently. Be different!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/templates.png')}}" alt="TEMPLATES" class="img" width="30">
+                            <h2 class="title">TEMPLATES</h2>
+                        </div>
+                        <p class="para">Pre-written Python files for beginners, offering a quick start to coding with ready-to-use structures for various projects. Support for you!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/cheat_sheets.png')}}" alt="Cheat Sheets" class="img" width="30">
+                            <h2 class="title">CHEAT SHEETS</h2>
+                        </div>
+                        <p class="para">A quick reference guide to Python syntax, functions, and concepts, making coding faster and more efficient. Work in shorthand!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/defense.png')}}" alt="PyCODE Defense" class="img" width="30">
+                            <h2 class="title">PyCODE DEFENSE</h2>
+                        </div>
+                        <p class="para">Equips you with solutions to common Python errors and troubleshooting tips, ensuring smoother coding experiences. Debug like a champion!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/pycode_testing.png')}}" alt="PyCODE Testing" class="img" width="30">
+                            <h2 class="title">PyCODE TESTING</h2>
+                        </div>
+                        <p class="para">Hands-on Python projects with source code, helping you practice and refine your coding skills through real-world examples. Ready for the Battle!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/additional.png')}}" alt="Additional Resources" class="img" width="30">
+                            <h2 class="title">ADDITIONAL RESOURCES</h2>
+                        </div>
+                        <p class="para">Essential links to Python downloads, VS Code setup, and official documentation, ensuring you have everything you need to succeed. Stay resourceful, stay ahead!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/pro_add_ons.png')}}" alt="PyCODE Pro Add-ons" class="img" width="30">
+                            <h2 class="title">PyCODE PRO ADD-ONs</h2>
+                        </div>
+                        <p class="para">Pre-built Python code with advanced-level documentation, perfect for elevating your projects to the next level. Code smarter, not harder!</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="data flex-col gap-10">
+                        <div class="top flex gap-10">
+                            <img src="{{url_for('static', filename='articles/the-surface/ai.png')}}" alt="ARTIFICIAL INTELLIGENCE" class="img" width="30">
+                            <h2 class="title">ARTIFICIAL INTELLIGENCE</h2>
+                        </div>
+                        <p class="para">Use-cases of artificial intelligence in coding and Python programming, unlocking the potential of AI to enhance your projects. Innovate with intelligence!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview flex-col gap-20">
+            <h1 class="heading">Wanna see what's inside?</h1>
+            <div class="bottom">
+                <div class="content">
+                    <h2 class="heading flex v-center gap-20" id="content">
+                        <span>THE SURFACE KIT</span>
+                        <img src="{{url_for('static', filename='articles/the-surface/arrow.png')}}" alt="Open The Kit" class="img">
+                    </h2>
+                    <div class="data flex-col" id="data">
+                        <div class="ebook flex">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/building_the_ship.png')}}" alt="Building The Ship" class="img">
+                                    <h2 class="title">BUILDING THE SHIP</h2>
+                                </div>
+                                <p class="para">Your ultimate guide to mastering Python! From basics to advanced concepts, this eBook provides step-by-step instructions, templates, cheat sheets, and exclusive PyCODE resources. Happy Coding!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/bdts1.png')}}" alt="Build the Ship - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/bdts2.png')}}" alt="Build the Ship - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/bdts3.png')}}" alt="Build the Ship - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/python_basics.png')}}" alt="Python Basics" class="img">
+                                    <h2 class="title">PYTHON BASICS</h2>
+                                </div>
+                                <p class="para">Learn syntax, variables, data types, operators, loops, functions, and more. This section builds the foundation for your Python programming journey. Start coding today!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/pb1.png')}}" alt="Python Basics - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pb2.png')}}" alt="Python Basics - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pb3.png')}}" alt="Python Basics - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pb4.png')}}" alt="Python Basics - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/python_advanced.png')}}" alt="Python Advanced" class="img">
+                                    <h2 class="title">PYTHON ADVANCED</h2>
+                                </div>
+                                <p class="para">Explore data structures, OOP, decorators, file handling, error handling, and libraries. Master advanced concepts to tackle complex projects with confidence. Keep coding!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/pa1.png')}}" alt="Python Advanced - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pa2.png')}}" alt="Python Advanced - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pa3.png')}}" alt="Python Advanced - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/pycode_advanced.png')}}" alt="PyCODE Advanced" class="img">
+                                    <h2 class="title">PyCODE ADVANCED</h2>
+                                </div>
+                                <p class="para">Discover common libraries, real-world use cases, and example projects to elevate your coding skills and build advanced applications. Code like a pro!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/pya1.png')}}" alt="PyCODE Advanced - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pya2.png')}}" alt="PyCODE Advanced - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pya3.png')}}" alt="PyCODE Advanced - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/being_pycode.png')}}" alt="Being PyCODE" class="img" width="30">
+                                    <h2 class="title">BEING PyCODE</h2>
+                                </div>
+                                <p class="para">An exclusive ebook offering unique learning assets, advanced Python concepts, and practical insights to elevate your coding skills and master Python programming efficiently. Be different!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/bp1.png')}}" alt="Being PyCODE - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/bp2.png')}}" alt="Being PyCODE - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/bp3.png')}}" alt="Being PyCODE - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/bp4.png')}}" alt="Being PyCODE - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/cheat_sheets.png')}}" alt="Cheat Sheets" class="img">
+                                    <h2 class="title">CHEAT SHEETS</h2>
+                                </div>
+                                <p class="para">A quick reference guide to Python syntax, functions, and concepts, making coding faster and more efficient. Work in shorthand!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/ch1.png')}}" alt="Cheat Sheets - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/ch2.png')}}" alt="Cheat Sheets - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/ch3.png')}}" alt="Cheat Sheets - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/defense.png')}}" alt="PyCODE Defense" class="img">
+                                    <h2 class="title">PyCODE DEFENSE</h2>
+                                </div>
+                                <p class="para">Equips you with solutions to common Python errors and troubleshooting tips, ensuring smoother coding experiences. Debug like a champion!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/pd1.png')}}" alt="PyCODE Defense - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pd2.png')}}" alt="PyCODE Defense - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pd3.png')}}" alt="PyCODE Defense - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/pycode_testing.png')}}" alt="PyCODE Testing" class="img">
+                                    <h2 class="title">PyCODE TESTING</h2>
+                                </div>
+                                <p class="para">Hands-on Python projects with source code, helping you practice and refine your coding skills through real-world examples. Ready for the Battle!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/pt1.png')}}" alt="PyCODE Testing - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pt2.png')}}" alt="PyCODE Testing - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/pt3.png')}}" alt="PyCODE Testing - Preview" class="img">
+                            </div>
+                        </div>
+                        <hr class="sub-divider">
+                        <div class="ebook">
+                            <div class="left">
+                                <div class="top flex gap-10">
+                                    <img src="{{url_for('static', filename='articles/the-surface/ai.png')}}" alt="Artificial Intelligence" class="img">
+                                    <h2 class="title">ARTIFICIAL INTELLIGENCE</h2>
+                                </div>
+                                <p class="para">Use-cases of artificial intelligence in coding and Python programming, unlocking the potential of AI to enhance your projects. Innovate with intelligence!</p>
+                            </div>
+                            <div class="right flex gap-20">
+                                <img src="{{url_for('static', filename='articles/the-surface/ai1.png')}}" alt="Artificial Intelligence - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/ai2.png')}}" alt="Artificial Intelligence - Preview" class="img">
+                                <img src="{{url_for('static', filename='articles/the-surface/ai3.png')}}" alt="Artificial Intelligence - Preview" class="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{url_for('static', filename='articles/the-surface/script.js')}}"></script>
+</body>
+</html>

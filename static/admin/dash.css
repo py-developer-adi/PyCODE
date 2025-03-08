@@ -1,0 +1,106 @@
+.main{
+    padding: 20px 50px;
+}
+
+.main h1.heading{
+    color: var(--blue);
+}
+
+.main h2.title{
+    color: var(--green);
+}
+
+.main .collection .models .model{
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.main .collection .models .model:hover{
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 10px var(--blue);
+}
+
+.main .collection .models .model .left .img{
+    width: 250px;
+    vertical-align: bottom;
+}
+
+.main .collection .models .model .right{
+    padding: 20px 50px;
+}
+
+.main .article_section .articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.main .article_section .articles .article{
+    padding: 10px;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+    border: 2px solid transparent;
+}
+
+.main .article_section .articles .article:hover{
+    border-color: var(--gray);
+}
+
+.main .article_section .articles .article .img{
+    width: 100%;
+    height: auto;
+}
+
+.main .community_section .communities .community{
+    padding: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.main .community_section .communities .community:hover{
+    box-shadow: 
+        0 0 10px var(--green),
+        0 0 10px var(--green);
+}
+
+.main .community_section .communities .community .left .img{
+    vertical-align: bottom;
+}
+
+.main .feedback_section .feeds{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.main .feedback_section .feeds .feed{
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.main .feedback_section .feeds .feed:hover{
+    transform: scale(0.95);
+    border-radius: 5px;
+    box-shadow: 
+        0 0 10px var(--red),
+        0 0 10px var(--red);
+}
+
+.main .beta_section .betas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: auto;
+}
+
+.main .beta_section .betas .beta{
+    transition: all 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main .beta_section .betas .beta:hover{
+    transform: scale(0.9);
+    box-shadow: 
+        0 0 10px var(--green),
+        0 0 10px var(--green);
+}

@@ -1,0 +1,45 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+}
+
+.main .log{
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.main .log .head{
+    justify-content: space-between;
+}
+
+.main .log .head .btn{
+    background-color: var(--red);
+    color: white;
+}
+
+.main .log{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 10px white,
+        0 0 10px white;
+}
+
+.main .log .note{
+    color: var(--gray);
+    font-size: 10px;
+}
+
+/* ! Responsive Version */
+@media (max-width: 768px) {
+    .beta-join{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .form .form-elem{
+        flex-direction: column;
+    }
+}

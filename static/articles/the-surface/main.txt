@@ -1,0 +1,15 @@
+<main class="main flex">
+        <section class="left flex-col">
+            <header class="header flex v-center">
+                <h1 class="heading"><a href="/home" class="link">PyCODE</a></h1>
+                <a href="/home" class="link btn">Contact</a>
+            </header>
+            <div class="hero_l">
+                <h2 class="title">THE SURFACE</h2>
+                <h4 class="sub-title">by PyCODE</h4>
+                <p class="para">Learn, Code, and Build!</p>
+
+            </div>
+        </section>
+        <section class="right"></section>
+    </main>

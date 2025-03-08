@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Let's make you a Landing Page</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/services.css')}}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+
+    <main class="main flex-col gap-50">
+        <div class="heads">
+            <h2 class="heading">PyCODE - Services</h2>
+            <h4 class="sub-heading">Let's make you a Landing Page</h4>
+        </div>
+        <section class="services">
+            {% for service in services %}
+            <a href="/info/{{service.id}}" class="service link">
+                <div class="top">
+                    <img src="{{url_for('static', filename=service.cover)}}" alt="service image" class="img">
+                </div>
+                <div class="text flex-col gap-10">
+                    <h2 class="title">{{service.title}}</h2>
+                    <p class="para">{{service.desc}}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+</body>
+</html>

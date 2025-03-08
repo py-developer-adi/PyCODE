@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Article | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+</head>
+
+<body>
+    {% include 'admin/header.html' %}
+
+    <main class="main">
+        <form action="/admin/add-article" method="post" class="form flex-col gap-10" enctype="multipart/form-data">
+            <input type="text" name="article-id" placeholder="Create an Article ID" class="input">
+            <input type="text" name="title" placeholder="Enter the Article Title" class="input">
+            <div class="form-elem">
+                <input type="checkbox" name="is_featured" id="featured" class="input">
+                <label for="featured">Add as Featured</label>
+            </div>
+            <div class="form-elem">
+                <label for="cover">Choose Cover Page</label>    
+                <input type="file" name="cover" id="cover" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="url">Choose Article File</label>
+                <input type="file" name="url" id="url" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="assets">Choose Article Assets</label>
+                <input type="file" name="assets" id="assets" class="input" multiple>
+            </div>
+            <button type="submit" class="btn">Add Article</button>
+        </form>
+    </main>
+</body>
+
+</html>

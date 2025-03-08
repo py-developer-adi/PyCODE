@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Community | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+</head>
+<body>
+    {% include 'admin/header.html' %}
+
+    <main class="main">
+        <form action="/admin/add-community" method="post" class="form flex-col gap-10" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Enter Community Title" class="input">
+            <div class="form-elem">
+                <label for="cover">Choose Cover Page</label>
+                <input type="file" name="cover" id="cover" class="input">
+            </div>
+            <input type="text" name="code" placeholder="Create Joining Code (if private)" class="input">
+            <select name="model-from" class="input">
+                <option value="None" selected>Not From Model</option>
+                {% for model in models %}
+                <option value="{{model.id}}">{{model.model}}</option>
+                {% endfor %}
+            </select>
+            <div class="form-elem">
+                <input type="checkbox" name="is-private" id="private" class="input">
+                <label for="private">Add as Private</label>
+            </div>
+            <button type="submit" class="btn">Add Community</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact PyCODE | Build Interactively</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+
+    <main class="main flex-col v-center h-center">
+        <div class="contact flex-col gap-50">
+            <div class="top flex-col gap-10">
+                <h1 class="heading">Contact PyCODE</h1>
+                <p class="para">PyCODE is a developer-focused brand delivering practical coding resources, templates, and courses to help you learn, build, and grow. Whether you're a beginner or an experienced coder, our high-quality, no-fluff content empowers you to code smarter and faster. Have questions or need support? We're here to help!</p>
+            </div>
+            <div class="bottom flex v-center">
+                <div class="left flex-col gap-50">
+                    <div class="home block flex gap-20">
+                        <img src="{{url_for('static', filename='assets/home.png')}}" alt="PyCODE Address Image" class="img">
+                        <div class="text">
+                            <h2 class="heading">Address</h2>
+                            <p class="desc">India | IN</p>
+                        </div>
+                    </div>
+                    <div class="phone block flex gap-20">
+                        <img src="{{url_for('static', filename='assets/phone.png')}}" alt="PyCODE Contact Image" class="img">
+                        <div class="text">
+                            <h2 class="heading">Phone</h2>
+                            <p class="desc">+91 9044791312</p>
+                        </div>
+                    </div>
+                    <div class="email block flex gap-20">
+                        <img src="{{url_for('static', filename='assets/email.png')}}" alt="PyCODE Email Image" class="img">
+                        <div class="text">
+                            <h2 class="heading">Email</h2>
+                            <a href="mailto:contact@py-code.in" class="link desc">contact@py-code.in</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex-col gap-20">
+                    <h2 class="heading">Contact Us</h2>
+                    <form action="/contact" method="post" class="form flex-col gap-20">
+                        <div class="form-elem flex-col gap-10">
+                            <label for="fullname">Your Name</label>
+                            <input type="text" name="fullname" id="fullname" class="input" placeholder="Enter your Full Name">
+                        </div>
+                        <div class="form-elem flex-col gap-10">
+                            <label for="email">Email</label>
+                            <input type="text" class="input" name="email" id="email" placeholder="Enter your Email" value="{{current_user.email}}">
+                        </div>
+                        <div class="form-elem flex-col gap-10">
+                            <label for="topic">Topic</label>
+                            <input name="topic" id="topic" class="input" placeholder="What is your query based on? Any Topic?">
+                        </div>
+                        <div class="form-elem flex-col gap-10">
+                            <label for="desc">Your Query</label>
+                            <textarea name="desc" id="desc" class="input" placeholder="Tell us what we can do for you..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'components/footer.html' %}
+</body>
+</html>

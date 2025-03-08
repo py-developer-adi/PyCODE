@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Service | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+</head>
+<body>
+    {% include 'admin/header.html' %}
+
+    <main class="main">
+        <form action="/admin/add-service" method="post" class="form flex-col gap-10" enctype="multipart/form-data">
+            <input type="text" name="service-id" placeholder="Create Service Id" class="input">
+            <input type="text" name="title" placeholder="Enter Service Title" class="input">
+            <textarea name="desc" placeholder="Write a description" class="input"></textarea>
+            <div class="form-elem">
+                <label for="cover">Choose Service Cover</label>
+                <input type="file" name="cover" id="cover" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="info">Choose Info File</label>
+                <input type="file" name="info" id="info" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="assets">Select all Assets</label>
+                <input type="file" name="assets" id="assets" class="input" multiple>
+            </div>
+            <div class="form-elem">
+                <input type="checkbox" name="is_featured" id="featured" class="input">
+                <label for="featured">Add as Featured</label>
+            </div>
+            <button type="submit" class="btn">Add Service</button>
+        </form>
+    </main>
+</body>
+</html>

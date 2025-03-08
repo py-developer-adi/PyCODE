@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Model | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+</head>
+<body>
+    {% include 'admin/header.html' %}
+
+    <main class="main">
+        <form action="/admin/add-model" method="post" class="form flex-col gap-10" enctype="multipart/form-data">
+            <input type="text" name="model-id" placeholder="Create a Model id" class="input">
+            <input type="text" name="model" placeholder="Enter the Model" class="input">
+            <input type="text" name="series" placeholder="Enter the Series" class="input">
+            <input type="number" name="price" placeholder="Enter the Price" class="input">
+            <textarea name="desc" placeholder="Write a description" class="input"></textarea>
+            <div class="form-elem">
+                <label for="overivew">Choose Overview Article</label>
+                <input type="file" name="overview" id="overview" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="preview">Choose Preview File</label>
+                <input type="file" name="preview" id="preview" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="cover">Choose Cover Page</label>
+                <input type="file" name="cover" id="cover" class="input">
+            </div>
+            <div class="form-elem">
+                <label for="assets">Select Included Files</label>
+                <input type="file" name="assets" id="assets" class="input" multiple>
+            </div>
+            <input type="date" name="limit" placeholder="Enter date to expire" class="input">
+            <div class="form-elem">
+                <label for="featured">Set as featured</label>
+                <input type="checkbox" name="is_featured" id="featured" class="input">
+            </div>
+            <button type="submit" class="btn">Add Model</button>
+        </form>
+    </main>
+</body>
+</html>

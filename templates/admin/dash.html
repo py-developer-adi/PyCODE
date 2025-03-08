@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='admin/dash.css')}}">
+</head>
+<body>
+    {% include 'admin/header.html' %}
+    {% include 'components/messagebox.html' %}
+
+    <main class="main flex-col gap-20">
+        <section class="collection flex-col gap-20">
+            <h1 class="heading">PyCODE Collection</h1>
+            <div class="models flex-col gap-20">
+                {% for model in models %}
+                <div class="model flex v-center">
+                    <div class="left">
+                        <img src="{{url_for('static', filename=model.cover)}}" class="img">
+                    </div>
+                    <div class="right flex-col gap-20">
+                        <h2 class="title">{{model.model}}</h2>
+                        <ul class="links">
+                            <li>{{model.series}}</li>
+                            <li>{{model.price}}</li>
+                            <li>{{model.limit}}</li>
+                        </ul>
+                        <p class="para">{{model.desc}}</p>
+                        <ul class="links flex gap-10">
+                            <li><a href="/overview/{{model.id}}" class="link btn">Overview</a></li>
+                            {% if not model.is_featured %}
+                            <li><a href="/admin/set-featured/model/{{model.id}}" class="link btn">Set Featured</a></li>
+                            {% endif %}
+                            <li><a href="/admin/delete/model/{{model.id}}" class="link btn">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="article_section flex-col gap-50">
+            <h1 class="heading">PyCODE Articles</h1>
+            <div class="articles">
+                {% for article in articles %}
+                <div class="link article flex-col">
+                    <div class="top">
+                        <img src="{{url_for('static', filename=article.cover)}}" class="img">
+                    </div>
+                    <div class="bottom">
+                        <h2 class="title">{{article.title}}</h2>
+                        <ul class="flex links gap-10">
+                            <li><a href="/view/{{article.id}}" class="link btn">View</a></li>
+
+                            {% if not article.is_featured %}
+                            <li><a href="/admin/set-featured/article/{{article.id}}" class="link btn">Set as Featured</a></li>
+                            {% endif %}
+
+                            <li><a href="/admin/delete/article/{{article.id}}" class="link btn">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="service_section flex-col gap-20">
+            <h1 class="heading">PyCODE Services</h1>
+            <div class="services flex-col gap-20">
+                {% for service in services %}
+                <div class="service flex gap-20">
+                    <div class="left">
+                        <img src="{{url_for('static', filename=service.cover)}}" class="img">
+                    </div>
+                    <div class="right flex-col gap-20">
+                        <h2 class="title">{{service.title}}</h2>
+                        <p class="para">{{service.desc}}</p>
+                        <span class="id">{{service.id}}</span>
+                        <ul class="links flex gap-10">
+                            <li><a href="/info/{{service.id}}" class="link btn">Info</a></li>
+                            <li><a href="/admin/delete/service/{{service.id}}" class="link btn">Delete</a></li>
+                            {% if not service.is_featured %}
+                            <li><a href="/admin/set-featured/service/{{service.id}}" class="link btn">Set as Featured</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="feedback_section flex-col gap-20">
+            <h1 class="heading">PyCODE Feeds</h1>
+            <div class="feeds gap-50">
+                {% for feed in feeds %}
+                <div class="feed flex-col gap-10">
+                    <h2 class="title">{{feed.topic}}</h2>
+                    <ul class="links">
+                        <li>Name {{feed.name}}</li>
+                        <li>Email {{feed.email}}</li>
+                    </ul>
+                    <p class="para">{{feed.desc}}</p>
+                    <a href="/admin/delete/feed/{{feed.id}}" class="link btn">Delete</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="beta_section flex-col gap-20">
+            <h1 class="heading">PyCODE BETA Users</h1>
+            <div class="betas">
+                {% for user in users %}
+                {% if user.is_beta %}
+                <div class="beta">
+                    <ul class="links">
+                        <li>{{user.username}}</li>
+                        <li>{{user.email}}</li>
+                    </ul>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

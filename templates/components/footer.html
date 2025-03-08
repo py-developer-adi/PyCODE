@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="{{url_for('static', filename='components/footer.css')}}">
+<footer class="footer flex-col gap-20">
+    <a href="/home" class="link">PyCODE</a>
+    <hr class="divider">
+    <div class="foot">
+        <h1 class="heading"><a href="/home" class="link">PyCODE</a></h1>
+        <ul class="links flex-col gap-10">
+            <li><a href="/home" class="link">The Brand</a></li>
+            <li><a href="/collection" class="link">Collection</a></li>
+            <li><a href="/services" class="link">Services</a></li>
+            <li><a href="/articles" class="link">Articles</a></li>
+            <li><a href="/contact" class="link">Contact</a></li>
+        </ul>
+        <div class="contact flex-col gap-10">
+            <div class="home block flex v-center gap-20">
+                <div class="left">
+                    <img src="{{url_for('static', filename='assets/home.png')}}" class="img">
+                </div>
+                <div class="right">
+                    <h2 class="heading">Address</h2>
+                    <p class="para">India | IN</p>
+                </div>
+            </div>
+            <hr class="sub-divider">
+            <div class="email block flex v-center gap-20">
+                <div class="left">
+                    <img src="{{url_for('static', filename='assets/email.png')}}" class="img">
+                </div>
+                <div class="right">
+                    <h2 class="heading">Email</h2>
+                    <a href="mailto:contact@py-code.in" class="link">contact@py-code.in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="endup flex gap-20">
+        <span class="title">PyCODE 2025</span>
+        <a href="upi://pay?pa=adityasdr2008@okhdfcbank&pn=ADITYA%20SINGH&tn=Donation" class="link">Donate</a>
+    </div>
+</footer>

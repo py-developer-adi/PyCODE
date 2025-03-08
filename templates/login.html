@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcom Back Developer | PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/auth.css')}}">
+</head>
+<body>
+    {% include 'components/messagebox.html' %}
+    <main class="main">
+        <section class="log">
+            <div class="head flex v-center">
+                <h1 class="title">PyCODE</h1>
+                <a href="/create-acc" class="link btn">Create Account</a>
+            </div>
+            <form action="/login" method="post" class="form flex-col gap-10">
+                <div class="form-elem flex gap-10">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" class="input">
+                </div>
+                <div class="form-elem flex gap-10">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" class="input">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('.log').classList.add('fade-in');
+    </script>
+</body>
+</html>

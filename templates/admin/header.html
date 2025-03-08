@@ -1,0 +1,24 @@
+<style>
+    .header{
+        padding: 20px 50px;
+    }
+
+    .header .links .link{
+        transition: all 0.3s;
+    }
+
+    .header .links .link:hover{
+        box-shadow: 
+            0 0 10px var(--blue),
+            0 0 10px var(--blue);
+    }
+</style>
+<header class="header flex v-center h-center">
+    <ul class="links flex gap-20">
+        <li><a href="/admin/dash" class="link btn">Home</a></li>
+        <li><a href="/admin/add-model" class="link btn">Add Model</a></li>
+        <li><a href="/admin/add-article" class="link btn">Add Article</a></li>
+        <li><a href="/admin/add-service" class="link btn">Add Service</a></li>
+    </ul>
+</header>
+<hr class="divider">

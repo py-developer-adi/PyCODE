@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyCODE Collection | One-of-One Premium Resources</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/collection.css')}}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+
+    <main class="main flex-col gap-50">
+        <div class="head">
+            <h1 class="heading">PyCODE Collection</h1>
+            <h3 class="sub-heading">One-of-One Premium Resources</h3>
+        </div>
+        <section class="collection">
+            {% for product in models %}
+            <a href="/overview/{{product.id}}" class="model link flex-col gap-20 hidden">
+                <img src="{{url_for('static', filename=product.cover)}}" alt="product cover image" class="img">
+                <h2 class="title">{{product.model}}</h2>
+            </a>
+            {% endfor %}
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{url_for('static', filename='js/collection.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+.main .hero{
+    height: 90vh;
+}
+
+.main .hero .intro{
+    padding: 20px 50px;
+}
+
+.main .hero .intro .top .headline{
+    font-size: 3rem;
+    font-family: 'Courier New';
+}
+
+.main .hero .intro .top .sub-headline{
+    font-size: 1.5rem;
+}
+
+.main .hero .intro .bottom .img{
+    opacity: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 10px var(--blue);
+}
+
+.main .hero .intro .bottom .hero-img-2{
+    display: none;
+}
+
+.main .hero .intro .bottom .img:hover{
+    transform: rotateX(360deg);
+    box-shadow: 
+        0 0 10px var(--red),
+        0 0 20px var(--red);
+}
+
+.main .benefit_section{
+    padding: 20px 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s;
+}
+
+.main .benefit_section .heading{
+    color: var(--red);
+}
+
+.main .benefit_section .benefits {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.main .benefit_section .benefits .benefit{
+    transition: all 0.3s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main .benefit_section .benefits .benefit:hover{
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 10px var(--blue);
+}
+
+.main .benefit_section .benefits .benefit .heading{
+    color: white;
+}
+
+.main .benefit_section .benefits .benefit .img{
+    width: 70px;
+}
+
+.main .featured_models{
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.main .featured_models .heading{
+    color: var(--gray);
+}
+
+.main .featured_models .models{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10vw;
+}
+
+.main .featured_models .models .model{
+    transition: all 0.3s;
+    padding: 10px;
+}
+
+.main .featured_models .models .model:hover{
+    transform: scale(0.9);
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 20px var(--blue);
+}
+
+.main .featured_models .models .model .img{
+    width: 100%;
+    height: auto;
+}
+
+.main .featured_models .models .model .title{
+    color: white;
+}
+
+.main .featured_articles{
+    text-align: center;
+    padding: 20px 50px;
+}
+
+.main .featured_articles .heading{
+    color: var(--gray);
+}
+
+.main .featured_articles .articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10vw;
+}
+
+.main .featured_articles .articles .article{
+    transition: all 0.3s;
+    padding: 10px;
+}
+
+.main .featured_articles .articles .article:hover{
+    transform: scale(0.9);
+    box-shadow: 
+        0 0 10px var(--green),
+        0 0 10px var(--green);
+}
+
+.main .featured_articles .articles .article .img{
+    width: 100%;
+    height: auto;
+}
+
+.main .featured_articles .articles .article .title{
+    color: white;
+}
+
+/* ! Responsive Version */
+@media (max-width: 768px){
+    .main .hero{
+        height: auto;
+    }
+    .main .hero .intro{
+        padding: 20px;
+    }
+
+    .main .hero .intro .bottom .img:hover{
+        box-shadow: 
+            0 0 10px var(--red),
+            0 0 10px var(--red);
+    }
+
+    .main .benefit_section{
+        padding: 20px;
+    }
+
+    .main .benefit_section .benefits{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main .featured_models, .main .featured_articles{
+        padding: 20px;
+    }
+
+    .main .featured_models .models{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main .featured_articles .articles{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 425px) {
+    .main .benefit_section .benefits{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main .featured_models .models{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+
+    .main .featured_models .models .model{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .main .featured_models .models .model .img{
+        width: 50%;
+    }
+
+    .main .hero .intro .bottom .hero-img-1{
+        display: none;
+    }
+
+    .main .hero .intro .bottom .hero-img-2{
+        display: inline;
+    }
+
+    .main .featured_models .models .model .title{
+        text-align: left;
+    }
+
+    .main .featured_articles .articles{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

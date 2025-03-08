@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Article - PyCODE</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='components/form.css')}}">
+</head>
+<body>
+    {% include 'admin/header.html' %}
+
+    <main class="main">
+        <form action="/admin/update-article" method="post" class="form flex-col gap-10" enctype="multipart/form-data">
+            <div class="form-elem">
+                <label for="assets">Choose Article Assets</label>
+                <input type="file" name="assets" id="assets" class="input" multiple>
+            </div>
+            <button type="submit" class="btn">Add Article</button>
+        </form>
+    </main>
+</body>
+</html>
